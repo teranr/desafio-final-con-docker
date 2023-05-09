@@ -1,0 +1,35 @@
+version: "3"
+services:
+  frontend:
+    container_name: front-shooping
+    build: ./frontend
+    environment:
+      - PRODUCTS_SERVICE=http://localhost:3000
+      - SHOPPING_CART_SERVICE=http://localhost:3000
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend_shopping_cart
+    networks:
+      - shopping
+
+  backend_products:
+    container_name: back-products
+    build: ./products
+    ports:
+      - "3001:3001"
+    depends_on:
+      - backend_shopping_cart
+    networks:
+      - shopping
+
+  backend_shopping_cart:
+    container_name: back-shopping-cart-
+    build: ./shopping-cart
+    ports:
+      - "3002:3002"
+    networks:
+      - shopping
+
+networks:
+  shopping:
