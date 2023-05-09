@@ -18,7 +18,7 @@ Aplicacion realizada en express y se expone en el puerto 3002
 
 ![](docs/k8s_architecture.png)
 
-#### Build Docker 
+<!-- #### Build Docker 
 - Para construir ejecutamos lo siguiente:
 ```
     docker build -t ms-frontend:1.0 frontend
@@ -42,10 +42,10 @@ Aplicacion realizada en express y se expone en el puerto 3002
 
 ### Adicional 
 - Crear Documentación
-- Buenas practicas
+- Buenas practicas -->
 
 ## Resultado
 
-![](docs/1.png)
-![](docs/2.png)
-![](docs/3.png)
+![](docs/localhost_shopping.png)
+![](docs/docker_ps.png)
+<!-- ![](docs/3.png) -->
